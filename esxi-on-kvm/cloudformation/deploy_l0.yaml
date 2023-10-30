@@ -98,17 +98,19 @@ Parameters:
   InstanceProfile:
     Type: String
     Description: "Instance Profile with permissions to SSM, Cloudwatch, EC2 and Managed AD services"
-    Default: "admin-instance-role"
+    Default: "LinuxJustin-InstanceProfile-gLLVOfRKseuR"
   ADDirectoryName:
     Type: String
     Description: "DNS domain corresponding to your Managed AD Instance"
-    Default: "example.local"
+    Default: "corp.andrdal.internal"
   ADDnsIpAddresses1:
     Type: String
     Description: "Example: 192.168.10.10"
+    Default: "10.31.13.178"
   ADDnsIpAddresses2:
     Type: String
     Description: "Example: 192.168.10.11"
+    Default: "10.31.14.142"
   EBSDataVolumeSize:
     Type: Number
     Description: "Size in GB for the EBS Volume that will be attached as D: and meant for MDF files"
@@ -136,7 +138,7 @@ Parameters:
   JoinAccount:
     Description: "More information - https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_join_privileges.html"
     Type: String
-    Default: "admin@EXAMPLE.LOCAL"
+    Default: "admin@corp.andrdal.internal"
   JoinAccountPassword:
     Description: Password for the AD joiner account
     Type: String
@@ -161,6 +163,7 @@ Parameters:
   S3BUCKET:
     Description: "S3 bucket where your ISOs are"
     Type: String
+    Default: "nested-esxi-andrdal"
   S3PREFIX:
     Description: "Prefix within said bucket with your ISOs"
     Type: String

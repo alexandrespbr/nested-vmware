@@ -28,7 +28,7 @@ import atexit
 import argparse
 import time
 
-from pyVim.connect import SmartConnectNoSSL, Disconnect
+from pyVim.connect import SmartConnect, Disconnect
 from pyVmomi import vim
 from re import search
 
@@ -73,10 +73,11 @@ def setup_args():
 def main():
     args = setup_args()
     try:
-        si = SmartConnectNoSSL(host=args.host,
+        si = SmartConnect(host=args.host,
                                user=args.user,
                                pwd=args.password,
-                               port=args.port)
+                               port=args.port,
+			       disableSslCertValidation=True)
         atexit.register(Disconnect, si)
     except:
         print("Unable to connect to %s" % args.host)

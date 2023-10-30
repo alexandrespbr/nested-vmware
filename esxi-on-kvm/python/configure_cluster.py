@@ -24,7 +24,7 @@ Mandatory Arguments
 import atexit
 import argparse
 import subprocess
-from pyVim.connect import SmartConnectNoSSL, Disconnect
+from pyVim.connect import SmartConnect, Disconnect
 from pyVmomi import vim
 from samples.tools import cluster, tasks, datacenter
 
@@ -104,10 +104,11 @@ def main():
     print("compute host 4: " + vcsa_to_compute_host_4_mapping[args.index])
 
     try:
-        si = SmartConnectNoSSL(host=vcsaaddr,
+        si = SmartConnect(host=vcsaaddr,
                                user=vcsauser,
                                pwd=args.password,
-                               port="443")
+                               port="443",
+			       disableSslCertValidation=True)
         atexit.register(Disconnect, si)
     except:
         print("Unable to connect to %s" % vcsaaddr)
