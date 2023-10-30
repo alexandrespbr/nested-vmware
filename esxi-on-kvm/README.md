@@ -4,7 +4,7 @@
 
 ### Includes [userdata script](bash/userdata-example.sh) and [cloudformation template](cloudformation/deploy_l0.yaml) for one-click deployment
 
-Sean Howard - *darmok.and.jalad@tanagra.uk*
+Alexandre Andrade- *alexandresp@gmail.com*
 
 [**[Diagrams]**](#diagrams)&nbsp;&nbsp;&nbsp; [**[Deploy]**](#deployment-steps)&nbsp;&nbsp;&nbsp; [**[Options]**](#optional-items--tips)&nbsp;&nbsp;&nbsp; [**[Using]**](#using-the-nested-environment)&nbsp;&nbsp;&nbsp; [**[Logs]**](#logs) &nbsp;&nbsp;&nbsp; [**[Errata]**](#errata)
 

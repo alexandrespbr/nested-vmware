@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# sean@tanagra.uk
 # Jan 2023
 #
 # This is a script which will set up a an xfce desktop environment under Centos 8 Stream
