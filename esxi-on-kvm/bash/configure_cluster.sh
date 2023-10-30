@@ -6,6 +6,9 @@
 ## because dcli is directly run here
 source $ESXIROOT/dcli_venv/bin/activate
 
+## FIX DCLI Error
+sed -i 's/base64.decodestring/base64.b64decode/g' /usr/local/lib/python3.9/site-packages/vmware/vapi/client/dcli/util.py
+
 let m1=1
 let c1=2
 let c2=3
