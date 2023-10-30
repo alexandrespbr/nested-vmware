@@ -304,6 +304,7 @@ Resources:
           mkdir -p /scripts
           cd /scripts
           git clone https://github.com/alexandrespbr/nested-vmware.git
+          mv nested-vmware vmware-admin-scripts
           cd vmware-admin-scripts
           chmod -R 770 *
 

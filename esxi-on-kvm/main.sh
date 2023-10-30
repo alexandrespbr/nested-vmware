@@ -139,7 +139,7 @@ echo "export SSOPASSWORD=$SSOPASSWORD" >> $ESXIROOT/bash/configure_l0_env.sh
 echo "export HOSTPASSWORD=$HOSTPASSWORD" >> $ESXIROOT/bash/configure_l0_env.sh
 echo "export ADPASSWORD=$ADPASSWORD" >> $ESXIROOT/bash/configure_l0_env.sh
 echo "export ADUSER=$ADUSER" >> $ESXIROOT/bash/configure_l0_env.sh
-echo "export OVFTOOLPATH=vcsa-extracted/$VSPHEREVERSION/vcsa/ovftool/lin64" >> $ESXIROOT/bash/configure_l0_env.sh 
+echo "export OVFTOOLPATH=$ESXIROOT/vcsa-extracted/$VSPHEREVERSION/vcsa/ovftool/lin64" >> $ESXIROOT/bash/configure_l0_env.sh 
 echo "export PATH=$PATH:/usr/libexec/:/usr/local/share/openvswitch/scripts:$PWD/bash:$PWD/python:$PWD/expect" >> $ESXIROOT/bash/configure_l0_env.sh
 echo "export ESXIROOT=$PWD" >> $ESXIROOT/bash/configure_l0_env.sh
 
