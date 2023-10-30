@@ -303,7 +303,7 @@ Resources:
           # Clone the git repo with all the scripts needed to build everything
           mkdir -p /scripts
           cd /scripts
-          git clone https://github.com/seahow-uk/vmware-admin-scripts.git
+          git clone https://github.com/alexandrespbr/nested-vmware.git
           cd vmware-admin-scripts
           chmod -R 770 *
 
