@@ -5,7 +5,9 @@
 ETH0IP=`ifconfig ovs-uplink | awk '/inet / {print $2}'`
 THIRDOCTET="$(cut -d'.' -f3 <<< $ETH0IP)"
 FOURTHOCTET="$(cut -d'.' -f4 <<< $ETH0IP)"
-echo "$ADPASSWORD" | kinit $ADUSER
+#echo "$ADPASSWORD" | kinit $ADUSER
+NEWADUSER=$(echo $ADUSER | awk -F'@' '{gsub(/\./,".",$2); printf "%s@%s\n", $1, toupper($2)}')
+echo "$ADPASSWORD" | kinit $NEWADUSER
 
 # this pre-creates a machine account in AD for when you're ready to go down that rathole
 # OUDN=$(awk -v str="$DNSDOMAIN" 'BEGIN {gsub("[.]", ",DC=", str); print "CN=Computers,DC="str}')
