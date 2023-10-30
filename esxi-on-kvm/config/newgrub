@@ -1,0 +1,6 @@
+GRUB_TIMEOUT=5
+GRUB_DEFAULT=saved
+GRUB_DISABLE_SUBMENU=true
+GRUB_TERMINAL_OUTPUT="console"
+GRUB_CMDLINE_LINUX="crashkernel=auto rhgb console=tty0 console=ttyS0,115200n8 ipv6.disable=1 selinux=0 intel_iommu=on"
+GRUB_DISABLE_RECOVERY="true"
