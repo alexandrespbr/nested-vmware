@@ -253,7 +253,12 @@ Resources:
       KeyName:
         Ref: KeyName
       SubnetId:
-        Ref: Subnet     
+        Ref: Subnet
+      Tags:
+        - Key: Name
+          Value: ESXi-Metal
+        - Key: Project
+          Value: internalpoc
       UserData:
         Fn::Base64: !Sub |
           #!/bin/bash
