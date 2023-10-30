@@ -88,6 +88,7 @@ Parameters:
     Description: "Select from the drop-down"
     Type: "AWS::EC2::KeyPair::KeyName"
     ConstraintDescription: must be the name of an existing EC2 KeyPair.
+    Default: "justin-us-east1"
   InstanceType:
     Description: "Select from the drop-down [Note: Prices include Windows Datacenter 2019 + SQL Std 2019 Licensing costs]"
     Type: String
