@@ -275,6 +275,9 @@ Resources:
           HOSTPASSWORD=${HOSTPASSWORD}
           SSOPASSWORD=${SSOPASSWORD}
 
+          ## SET TIMEZONE
+          timedatectl set-timezone America/Sao_Paulo
+
           ## You'll need to hack the scripts to change this so I'd just leave it alone for now
 
           ESXIROOT="/scripts/vmware-admin-scripts/esxi-on-kvm"
